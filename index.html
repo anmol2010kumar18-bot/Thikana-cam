@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="Thikana Cam">
 <title>Thikana Cam</title>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Instrument+Sans:wght@400;600&family=Syne:wght@700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0f1a24;--deep:#182733;--line:#34505f;--mist:#d8e4ea;--lilac:#9aa8ff;--amber:#ffc857;--bad:#ff8f8f}
 *{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
@@ -50,10 +50,10 @@ video{width:100%;height:100%;object-fit:cover;display:block}
 .stamp{width:100%;display:flex;gap:10px;padding:9px;border-radius:15px}
 .stamp canvas{width:76px;height:76px;flex:none;border-radius:11px;align-self:flex-start}
 .st{min-width:0;display:flex;flex-direction:column;gap:1px}
-.st b{font:700 13px Unbounded,sans-serif;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.st span{font-size:11px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st>b{font:800 14px Syne,Outfit,sans-serif;letter-spacing:.01em;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st span{font:400 11.5px/1.4 Outfit,'Instrument Sans',sans-serif;white-space:pre-wrap;overflow:hidden}.st span b{font-weight:800;color:#fff}.st span b.nw{color:inherit}
 .st .ad{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.st .co{font-weight:600;color:var(--lilac)}
+.st .co{color:var(--lilac)}
 .stamp.compact canvas{width:46px;height:46px}
 .stamp.compact .ad,.stamp.compact #sPlus,.stamp.compact #sM1,.stamp.compact #sM2,.stamp.minimal .ad,.stamp.minimal #sPlus,.stamp.minimal #sM1,.stamp.minimal #sM2{display:none}
 .stamp.minimal{background:none;border:0;backdrop-filter:none;padding:2px;text-shadow:0 1px 3px #000,0 0 6px #000}
@@ -82,6 +82,24 @@ dialog img{width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;dis
 .tm{display:flex;gap:8px}.tm.custom input{border-color:var(--amber)}.tm .btn{white-space:nowrap}
 .seg{display:flex;gap:6px}.seg .btn{flex:1;padding:10px 4px;font-size:14px}
 .sheet .done{width:100%;margin-top:20px}
+.loc .lhead{display:flex;gap:12px;align-items:center}.loc .lhead img{width:52px;height:52px;max-height:none;border-radius:12px;object-fit:cover;flex:none}.loc .lhead p{font-size:13px;color:#9fb4c0;line-height:1.35;margin-top:3px}
+.lsearch{display:flex;gap:8px;margin-top:14px}.lsearch .btn{white-space:nowrap}
+.lres{margin-top:8px;border:1px solid var(--line);border-radius:12px;overflow:hidden}.lres button{display:block;width:100%;text-align:left;background:var(--deep);color:var(--mist);border:0;border-bottom:1px solid var(--line);padding:10px 12px;font:400 13px/1.3 Outfit,'Instrument Sans',sans-serif;cursor:pointer}.lres button:last-child{border-bottom:0}
+.lmap{position:relative;height:min(44dvh,300px);margin-top:12px;border-radius:14px;overflow:hidden;background:#182733;border:1px solid var(--line);touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.lmap img.tl{position:absolute;left:0;top:0;width:256px;height:256px;max-width:none;max-height:none;border-radius:0;background:#182733;pointer-events:none}
+.lpin{position:absolute;left:50%;top:50%;width:46px;height:46px;transform:translate(-50%,-92%);pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.55))}
+.lz{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:6px}.lz button,.lme{border:1px solid var(--line);background:rgba(15,26,36,.92);color:#fff;cursor:pointer}.lz button{width:40px;height:40px;border-radius:11px;font-size:22px;line-height:1}
+.lme{position:absolute;left:8px;top:8px;min-height:40px;border-radius:11px;padding:0 12px;font:600 13px Outfit,'Instrument Sans',sans-serif}
+.lat{position:absolute;left:6px;bottom:4px;font-size:10px;color:#0f1a24;background:rgba(255,255,255,.78);padding:1px 6px;border-radius:6px;pointer-events:none}
+.linfo{margin-top:12px;display:flex;flex-direction:column;gap:2px}.linfo b{font:800 15px Syne,Outfit,sans-serif;color:#fff}.linfo span{font:400 12.5px/1.35 Outfit,'Instrument Sans',sans-serif;color:var(--mist)}.linfo .co{color:var(--lilac);font-weight:600}
+.loc input[type=datetime-local]{width:100%;font:400 16px 'Instrument Sans',sans-serif;color:#fff;background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:12px;min-height:46px;color-scheme:dark}
+.trow{display:flex;gap:6px;width:100%;align-items:center;justify-content:space-between}.trow .chip{min-width:0;flex:0 1 auto}
+.brandp{margin-left:auto;display:flex;align-items:center;gap:6px;padding:4px 11px 4px 5px;border-radius:99px;max-width:62%;background:rgba(15,26,36,.86);border:1px solid rgba(154,168,255,.45);backdrop-filter:blur(6px);color:#fff;font:800 12px Syne,Outfit,sans-serif;white-space:nowrap}.brandp.nl{padding-left:11px}.brandp.lo{padding:4px 5px}.brandp img{width:22px;height:22px;border-radius:7px;object-fit:cover;flex:none}.brandp span{overflow:hidden;text-overflow:ellipsis}
+.lsaved{display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:2px}.pc{display:flex;flex:none;border:1px solid var(--line);border-radius:99px;background:var(--deep);overflow:hidden}.pc.on{border-color:var(--amber)}.pc button{background:none;border:0;color:var(--mist);font:600 13px Outfit,'Instrument Sans',sans-serif;padding:8px 10px;cursor:pointer;white-space:nowrap}.pc .px{padding:8px 11px 8px 2px;color:#9fb4c0;font-size:12px}
+.lsave{display:flex;gap:8px;margin-top:10px}.lsave input{flex:1;min-width:0}.lsave .btn{white-space:nowrap}
+.hint{font-size:12.5px;color:#9fb4c0;line-height:1.4;margin-top:8px}
+.logoRow{display:flex;gap:8px;align-items:center;margin-top:8px}.logoRow img{width:46px;height:46px;max-height:none;object-fit:cover;border-radius:10px;border:1px solid var(--line);flex:none}.logoRow .btn{white-space:nowrap}
+.chk{display:flex;gap:10px;align-items:center;margin-top:14px;font-size:14px;color:var(--mist)}.chk input{width:20px;height:20px;accent-color:#9aa8ff;flex:none}
 .brand{display:flex;align-items:center;gap:9px}
 .mk{width:32px;height:32px;flex:none}
 .install{position:fixed;z-index:200;top:calc(env(safe-area-inset-top,0px) + 10px);left:10px;right:10px;max-width:460px;margin:auto;display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:center;padding:10px 10px 10px 12px;border-radius:18px;background:var(--deep);border:1px solid var(--lilac);box-shadow:0 14px 40px rgba(0,0,0,.55);animation:pop .45s cubic-bezier(.2,1.3,.4,1)}
@@ -135,7 +153,7 @@ dialog img{width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;dis
       <button class="btn ghost" id="pickBtn">Take or pick a photo instead</button>
     </div>
     <div class="dock">
-      <div class="chip" id="chip" hidden></div>
+      <div class="trow" id="trow" hidden><div class="chip" id="chip" hidden></div><div class="brandp" id="brandP" hidden><img id="brandI" alt=""><span id="brandS"></span></div></div>
       <div class="stamp full" id="stamp">
         <canvas id="mm" width="240" height="240"></canvas>
         <div class="st"><b id="sPlace">Locating…</b><span class="ad" id="sAddr"></span><span class="co" id="sCoord"></span><span id="sPlus"></span><span id="sWhen"></span><span id="sM1"></span><span id="sM2"></span></div>
@@ -146,7 +164,7 @@ dialog img{width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;dis
 
   <section class="bar">
     <div class="ctrl">
-      <div class="side"><button class="sq" id="thumb" aria-label="Open saved photos"></button></div>
+      <div class="side"><button class="sq" id="thumb" aria-label="Open saved photos"></button><button class="sq" id="galB" title="Make a GPS photo from a gallery photo" aria-label="Make a GPS photo from a gallery photo"><svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.4-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.6 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg></button></div>
       <button class="shutter" id="shutter" aria-label="Take photo"><i></i></button>
       <div class="side r">
         <button class="sq" id="edit" aria-label="Edit note, date, time, style and language"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></button>
@@ -183,9 +201,37 @@ dialog img{width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;dis
   <div class="seg" id="styleSeg"><button class="btn ghost" data-s="full">Full</button><button class="btn ghost" data-s="compact">Compact</button><button class="btn ghost" data-s="minimal">Minimal</button><button class="btn ghost" data-s="off">Off</button></div>
   <span class="lb">Address language</span>
   <div class="seg" id="langSeg"><button class="btn ghost" data-l="en">English</button><button class="btn ghost" data-l="hi">हिन्दी</button></div>
+  <span class="lb">Brand on photo</span>
+  <input type="text" id="brandT" placeholder="Business or team name (optional)" maxlength="28" autocomplete="off">
+  <div class="logoRow"><img id="logoP" alt="Your logo" hidden><button class="btn ghost" id="logoB" type="button">Add logo</button><button class="btn ghost" id="logoX" type="button" hidden>Remove</button></div>
+  <input type="file" id="logoIn" accept="image/*" hidden>
+  <span class="lb">Location data inside the photo file</span>
+  <div class="seg" id="exSeg"><button class="btn ghost" data-x="1">On</button><button class="btn ghost" data-x="0">Off</button></div>
+  <p class="hint">On: gallery apps like Google Photos can show the photo on a map. Turn it off if you don't want the exact location inside the file when you share it.</p>
   <div class="instRow" id="instRow" hidden><button class="btn ghost" id="instBtn">Install app on this phone</button></div>
   <button class="btn ghost" id="aboutB2" style="width:100%;margin-top:10px">About, privacy and credits</button>
   <button class="btn done" id="done">Done</button>
+</dialog>
+
+<dialog id="loc" class="sheet loc">
+  <div class="lhead"><img id="lph" alt="Selected photo"><div><h2>GPS photo</h2><p>Choose where this photo was taken. Drag the map, search a place, or paste coordinates.</p></div></div>
+  <div class="lsearch"><input type="text" id="lq" placeholder="Search place or paste coordinates / Maps link" autocomplete="off" enterkeyhint="search"><button class="btn" id="lgo">Search</button></div>
+  <div class="lres" id="lres" hidden></div>
+  <div class="lmap" id="lmap">
+    <div id="lt"></div>
+    <svg class="lpin" viewBox="0 0 512 512" aria-hidden="true"><use href="#mark"/></svg>
+    <button class="lme" id="lme" type="button">📍 My location</button>
+    <div class="lz"><button id="lzi" type="button" aria-label="Zoom in">+</button><button id="lzo" type="button" aria-label="Zoom out">−</button></div>
+    <span class="lat">© OpenStreetMap</span>
+  </div>
+  <div class="lsaved" id="lsaved" hidden></div>
+  <div class="lsave"><button class="btn ghost" id="lsv" type="button">⭐ Save this spot</button></div>
+  <div class="lsave" id="lsname" hidden><input type="text" id="lsn" maxlength="30" placeholder="Name it, e.g. Site A" autocomplete="off" enterkeyhint="done"><button class="btn" id="lsok" type="button">Save</button></div>
+  <div class="linfo"><b id="lPlace">Locating…</b><span id="lAddr"></span><span class="co" id="lCoord"></span></div>
+  <label class="lb" for="ldt">Date and time of photo</label>
+  <input type="datetime-local" id="ldt" step="1">
+  <label class="chk"><input type="checkbox" id="lman" checked> Mark stamp as “Manual location”</label>
+  <div class="vb"><button class="btn ghost" id="lx">Cancel</button><button class="btn" id="lok">Stamp photo</button></div>
 </dialog>
 
 <dialog id="about" class="ab">
@@ -193,13 +239,13 @@ dialog img{width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;dis
   <h3>What it does</h3>
   <p>Takes photos and stamps them with your place name, address, coordinates, map, date, time, weather and direction, so every picture tells where and when it was taken.</p>
   <h3 id="abPriv">Privacy</h3>
-  <p>Your photos are saved only on your phone. Nothing is uploaded to our servers, and there are no accounts or ads. To fill in the address, map and weather, your coordinates are sent to OpenStreetMap and Open-Meteo. You can turn off camera and location access anytime in your browser settings.</p>
+  <p>Your photos are saved only on your phone. Nothing is uploaded to our servers, and there are no accounts or ads. By default each photo file also carries its GPS location and date in its metadata, so gallery apps can show it on a map. You can turn this off in Edit stamp. To fill in the address, map and weather, your coordinates are sent to OpenStreetMap and Open-Meteo. You can turn off camera and location access anytime in your browser settings.</p>
   <h3>Accuracy</h3>
-  <p>Location comes from your phone and can be off by several metres, and more indoors. Date and time come from your phone clock and can be edited, so a stamp is a convenience and not legal proof.</p>
+  <p>Location comes from your phone and can be off by several metres, and more indoors. Date and time come from your phone clock and can be edited. Photos made from your gallery use a location you choose by hand, and are marked “Manual location” unless you turn that off. A stamp is a convenience and not legal proof.</p>
   <h3 id="abTerms">Terms of use</h3>
   <p>This app is provided as it is, without any warranty. Please use it responsibly and respect other people's privacy when taking photos.</p>
   <h3>Credits</h3>
-  <p>Map data © OpenStreetMap contributors. Weather data by Open-Meteo. Fonts: Unbounded and Instrument Sans.</p>
+  <p>Map data © OpenStreetMap contributors. Weather data by Open-Meteo. Fonts: Unbounded, Instrument Sans, Syne and Outfit.</p>
   <div class="cp">© <span id="yr2">2026</span> Thikana Cam. All rights reserved.<br>Designed and developed by Anmol Kumar.</div>
   <div class="vb"><button class="btn wide" id="aboutX">Close</button></div>
 </dialog>
@@ -216,28 +262,45 @@ dialog img{width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;dis
   </div>
 </dialog>
 <input type="file" id="pick" accept="image/*" capture="environment" hidden>
+<input type="file" id="gal" accept="image/*" hidden>
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const v=$('#v');
-let pos=null,addr=null,wx='',facing='environment',stream=null,shots=[],idx=0,lastPt=null,custom=null,devHead=null,mapTile=null,torchOn=false,db=null;
+let pos=null,addr=null,wx=null,facing='environment',stream=null,shots=[],idx=0,lastPt=null,custom=null,devHead=null,mapTile=null,torchOn=false,db=null;
 const S={lang:'en',style:'full',grid:false};
 try{Object.assign(S,JSON.parse(localStorage.getItem('thikana')||'{}'))}catch(e){}
 const save=()=>{try{localStorage.setItem('thikana',JSON.stringify(S))}catch(e){}};
 const GAL='<svg class="ic" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="3"/><circle cx="9" cy="10.5" r="1.6"/><path d="M4 17l5-4 4 3 3-2 4 3"/></svg>';
 
+let brandImg=null;
+/* ---------- fonts used on the stamp (loaded before drawing so the photo text matches) ---------- */
+const fontsReady=Promise.race([Promise.all(['800 20px Syne','400 20px Outfit','800 20px Outfit'].map(f=>document.fonts.load(f,'Aa0'))),new Promise(r=>setTimeout(r,2500))]).catch(()=>{});
+fontsReady.then(()=>{try{render()}catch(e){}});
+
 /* ---------- helpers ---------- */
 function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
 function fmtCoord(c){if(!c)return'Waiting for GPS…';const f=(n,p,m)=>Math.abs(n).toFixed(6)+'° '+(n>=0?p:m);return f(c.latitude,'N','S')+'   '+f(c.longitude,'E','W')}
-function when(){const d=custom||new Date();const t=d.toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});const z=new Intl.DateTimeFormat('en',{timeZoneName:'short'}).formatToParts(d).find(p=>p.type==='timeZoneName');return t+' '+(z?z.value:'')}
+function when(dd){const d=dd||custom||new Date();const t=d.toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});const z=new Intl.DateTimeFormat('en',{timeZoneName:'short'}).formatToParts(d).find(p=>p.type==='timeZoneName');return t+' '+(z?z.value:'')}
 function plus(la,lo){const A='23456789CFGHJMPQRVWX';let a=Math.floor((Math.min(90,Math.max(-90,la))+90)*8000),b=Math.floor((lo+180)*8000),s='';for(let i=0;i<5;i++){s=A[b%20]+s;s=A[a%20]+s;a=Math.floor(a/20);b=Math.floor(b/20)}return s.slice(0,8)+'+'+s.slice(8)}
 const wxText=c=>c===0?'Clear':c<4?'Partly cloudy':c<50?'Fog':c<60?'Drizzle':c<70?'Rain':c<80?'Snow':c<90?'Showers':'Thunderstorm';
-function head(){const a=(pos&&pos.speed>1&&pos.heading!=null)?pos.heading:devHead;if(a==null||isNaN(a))return'';return'Facing '+['N','NE','E','SE','S','SW','W','NW'][Math.round(a/45)%8]+' '+Math.round(a)+'°'}
-function data(){const p=pos;return{place:addr?addr.short:(p?'Unnamed place':'Locating…'),addr:addr?addr.full:'',coord:fmtCoord(p),
- plus:p?'Plus Code '+plus(p.latitude,p.longitude)+(addr&&addr.pin?'   PIN '+addr.pin:''):'',when:when(),
- m1:p?'Altitude '+(p.altitude!=null?Math.round(p.altitude)+' m':'n/a')+'   Accuracy ±'+Math.round(p.accuracy)+' m   Speed '+Math.round((p.speed||0)*3.6)+' km/h':'',
- m2:[wx,head()].filter(Boolean).join('   '),note:$('#note').value.trim(),lat:p?p.latitude:0,lon:p?p.longitude:0}}
+const wxIcon=(c,day)=>c===0?(day?'☀️':'🌙'):c<3?(day?'⛅':'☁️'):c===3?'☁️':c<50?'🌫️':c<60?'🌦️':c<70?'🌧️':c<80?'❄️':c<90?'🌧️':'⛈️';
+const dir8=a=>['N','NE','E','SE','S','SW','W','NW'][Math.round(a/45)%8];
+function head(){const a=(pos&&pos.speed>1&&pos.heading!=null)?pos.heading:devHead;if(a==null||isNaN(a))return'';return dir8(a)+' '+Math.round(a)+'°'}
+/* text pieces: reg = normal, bold = heavier (white label), so key facts stand out */
+const reg=t=>({t}),bold=(t,o)=>Object.assign({t,b:1,w:1},o);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const segHtml=s=>s.map(x=>x.b?'<b'+(x.w?'':' class="nw"')+(x.c?' style="color:'+x.c+'"':'')+'>'+esc(x.t)+'</b>':esc(x.t)).join('');
+function data(o){const p=o?o.pos:pos,A=o?o.addr:addr,W=o?o.wx:wx,H=o?'':head(),pin=A&&A.pin;
+ const m2=[];
+ if(W){m2.push(reg('🌡️ '),bold(W.t+'°C'),reg('   '+W.icon+' '+W.text+'   💨 '+W.w+' km/h'+(W.wd!=null?' '+dir8(W.wd):'')))}
+ if(H){m2.push(reg((m2.length?'   ':'')+'🧭 '),bold(H))}
+ const m1=o?(o.manual?[reg('📌 '),bold('Manual location')]:[]):(p?[reg('⛰️ '),bold('Altitude '),reg(p.altitude!=null?Math.round(p.altitude)+' m':'n/a'),reg('   🎯 '),bold('Accuracy ±'+Math.round(p.accuracy)+' m',{c:'#ffc857'}),reg('   🚗 '),bold('Speed '),reg(Math.round((p.speed||0)*3.6)+' km/h')]:[]);
+ return{place:'📍 '+(A?A.short:(p?'Unnamed place':'Locating…')),addr:A?A.full:'',
+ coord:p?[bold(('🌐 '+fmtCoord(p)),{w:0})]:[bold('🌐 Waiting for GPS…',{w:0})],
+ plus:p?[reg('➕ '),bold('Plus Code '),reg(plus(p.latitude,p.longitude))].concat(pin?[reg('   📮 '),bold('PIN '),reg(pin)]:[]):[],
+ when:[bold('🗓️ '+when(o&&o.date))],m1,m2,brand:{t:(S.brand||'').trim(),img:brandImg},note:$('#note').value.trim(),lat:p?p.latitude:0,lon:p?p.longitude:0}}
 
 /* ---------- map: OpenStreetMap tiles, contour art offline ---------- */
 function loadTiles(c){
@@ -264,23 +327,41 @@ function drawMap(c,x,y,s,lat,lon){
 /* ---------- stamp burned into the photo: full, compact, minimal ---------- */
 function wrap(c,t,mw,n){const w=t.split(/\s+/),L=[];let l='';for(const k of w){const z=l?l+' '+k:k;if(c.measureText(z).width>mw&&l){L.push(l);l=k}else l=z}if(l)L.push(l);
   if(L.length>n){L.length=n;let s=L[n-1];while(s&&c.measureText(s+'…').width>mw)s=s.slice(0,-1);L[n-1]=s+'…'}return L}
-function fit(c,t,mw){while(t.length>1&&c.measureText(t).width>mw)t=t.slice(0,-1);return t}
+function fit(c,t,mw){if(c.measureText(t).width<=mw)return t;while(t.length>1&&c.measureText(t+'…').width>mw)t=t.slice(0,-1);return t+'…'}
+function rich(c,segs,x,y,mw,sz,u,fam,col){
+  if(!segs||!segs.length)return;
+  const f=(s,k)=>(s.b?800:400)+' '+sz*u*k+'px '+fam;
+  const meas=k=>segs.reduce((a,s)=>{c.font=f(s,k);return a+c.measureText(s.t).width},0);
+  const w=meas(1),k=w>mw?Math.max(.55,mw/w):1;
+  c.textAlign='left';let px=x;
+  segs.forEach(s=>{c.font=f(s,k);c.fillStyle=s.c||(s.w?'#fff':col);c.fillText(s.t,px,y);px+=c.measureText(s.t).width})}
 function stampOn(c,w,h,d,st){
-  const u=Math.min(w,h)/100,m=3*u,cw=w-2*m,x=m,full=st==='full',min=st==='minimal',ch=(full?31.5:min?15:17.8)*u,y=h-m-ch;
-  const tx=x+(min?0:(full?28.6:17.6)*u),mw=cw-(tx-x)-(min?0:2.2*u),F='Unbounded,Instrument Sans,sans-serif',B='Instrument Sans,sans-serif';
+  const u=Math.min(w,h)/100,m=3*u,cw=w-2*m,x=m,full=st==='full',min=st==='minimal',rows=full?[d.coord,d.plus,d.when,d.m1,d.m2].filter(r=>r&&r.length):[],ch=(full?Math.max(28.6,31.5-(5-rows.length)*2.75):min?15:17.8)*u,y=h-m-ch;
+  const tx=x+(min?0:(full?28.6:17.6)*u),mw=cw-(tx-x)-(min?0:2.2*u),F='Syne,Outfit,sans-serif',B='Outfit,Instrument Sans,sans-serif';
   c.textBaseline='alphabetic';
   if(!min){rr(c,x,y,cw,ch,2.4*u);c.fillStyle='rgba(15,26,36,.86)';c.fill();c.strokeStyle='rgba(154,168,255,.5)';c.lineWidth=.3*u;c.stroke();drawMap(c,x+2.2*u,y+2.2*u,(full?24:13.4)*u,d.lat,d.lon)}
   else{c.shadowColor='rgba(0,0,0,.85)';c.shadowBlur=1.2*u}
   const T=(t,col,wt,sz,yy,fam)=>{c.fillStyle=col;c.font=wt+' '+sz*u+'px '+(fam||B);c.fillText(fit(c,t,mw),tx,y+yy*u)};
-  if(full){T(d.place,'#fff',700,3.4,6.6,F);c.font='400 '+2.3*u+'px '+B;c.fillStyle='#d8e4ea';
+  const R=(s,col,sz,yy)=>rich(c,s,tx,y+yy*u,mw,sz,u,B,col);
+  if(full){T(d.place,'#fff',800,3.3,6.6,F);c.font='400 '+2.4*u+'px '+B;c.fillStyle='#d8e4ea';
     wrap(c,d.addr,mw,2).forEach((l,i)=>c.fillText(l,tx,y+(10.6+i*2.8)*u));
-    T(d.coord,'#9aa8ff',600,2.5,17.8);T(d.plus,'#d8e4ea',400,2.2,20.8);T(d.when,'#d8e4ea',400,2.2,23.6);T(d.m1,'#d8e4ea',400,2.2,26.2);T(d.m2,'#d8e4ea',400,2.2,28.8)}
-  else if(min){T(d.place,'#fff',700,3.8,4.6,F);T(d.coord,'#fff',600,2.6,9);T(d.when,'#fff',400,2.3,12.6)}
-  else{T(d.place,'#fff',700,3.2,6.6,F);T(d.coord,'#9aa8ff',600,2.4,11.2);T(d.when,'#d8e4ea',400,2.2,14.4)}
+    rows.forEach((r,i)=>R(r,i?'#d8e4ea':'#9aa8ff',i?2.3:2.5,17.8+i*2.75))}
+  else if(min){T(d.place,'#fff',800,3.6,4.6,F);R(d.coord,'#fff',2.6,9);R(d.when,'#fff',2.4,12.6)}
+  else{T(d.place,'#fff',800,3.1,6.6,F);R(d.coord,'#9aa8ff',2.4,11.2);R(d.when,'#d8e4ea',2.3,14.4)}
   c.shadowBlur=0;
-  if(d.note){c.font='600 '+2.8*u+'px '+B;const nw=Math.min(cw,c.measureText(d.note).width+5*u);
+  let noteW=0;
+  if(d.note){c.font='600 '+2.8*u+'px '+B;const nw=Math.min(cw,c.measureText(d.note).width+5*u);noteW=nw;
     rr(c,x,y-6.9*u,nw,5.4*u,2.7*u);c.fillStyle='rgba(15,26,36,.86)';c.fill();c.strokeStyle='rgba(154,168,255,.5)';c.stroke();
     c.fillStyle='#fff';c.fillText(fit(c,d.note,nw-5*u),x+2.5*u,y-3.2*u)}
+  const bt=d.brand&&d.brand.t,bi=d.brand&&d.brand.img;
+  if(bt||bi){const ls=4.2*u,pad=2.5*u,gap=1.6*u,H=5.4*u,avail=cw-(noteW?noteW+1.5*u:0);
+    c.font='800 '+2.6*u+'px '+F;let tw=bt?c.measureText(bt).width:0;
+    let bw=bi?(bt?.6*u+ls+gap+tw+pad:ls+3.2*u):pad*2+tw;
+    if(bw>avail){tw=Math.max(0,tw-(bw-avail));bw=avail}
+    const bx=x+cw-bw,by=y-6.9*u;rr(c,bx,by,bw,H,H/2);c.fillStyle='rgba(15,26,36,.86)';c.fill();c.strokeStyle='rgba(154,168,255,.5)';c.lineWidth=.3*u;c.stroke();
+    let px=bx+(bi?(bt?.6*u:(bw-ls)/2):pad);
+    if(bi){const iy=by+(H-ls)/2;c.save();rr(c,px,iy,ls,ls,1.2*u);c.clip();c.drawImage(bi,px,iy,ls,ls);c.restore();px+=ls+gap}
+    if(bt){c.font='800 '+2.6*u+'px '+F;c.fillStyle='#fff';c.fillText(fit(c,bt,tw),px,y-3.2*u)}}
 }
 
 /* ---------- live preview ---------- */
@@ -291,9 +372,11 @@ function onDt(){const val=$('#dt').value;custom=val?new Date(val):null;updTm();r
 $('#dt').addEventListener('input',onDt);$('#dt').addEventListener('change',onDt);
 $('#live').onclick=()=>{custom=null;updTm();syncDt();render()};
 function render(){syncDt();const d=data();
-  $('#sPlace').textContent=d.place;$('#sAddr').textContent=d.addr;$('#sCoord').textContent=d.coord;$('#sPlus').textContent=d.plus;
-  $('#sWhen').textContent=d.when;$('#sM1').textContent=d.m1;$('#sM2').textContent=d.m2;
-  const ch=$('#chip');ch.hidden=!d.note||S.style==='off';ch.textContent=d.note}
+  $('#sPlace').textContent=d.place;$('#sAddr').textContent=d.addr;$('#sCoord').innerHTML=segHtml(d.coord);$('#sPlus').innerHTML=segHtml(d.plus);
+  $('#sWhen').innerHTML=segHtml(d.when);$('#sM1').innerHTML=segHtml(d.m1);$('#sM2').innerHTML=segHtml(d.m2);
+  const ch=$('#chip'),bp=$('#brandP'),off=S.style==='off';ch.hidden=!d.note||off;ch.textContent=d.note;
+  bp.hidden=off||!(d.brand.t||brandImg);bp.classList.toggle('nl',!brandImg);bp.classList.toggle('lo',!d.brand.t);$('#brandS').hidden=!d.brand.t;$('#brandS').textContent=d.brand.t;$('#brandI').hidden=!brandImg;if(brandImg&&$('#brandI').src!==S.logo)$('#brandI').src=S.logo;
+  $('#trow').hidden=ch.hidden&&bp.hidden}
 function paintMap(){const d=data(),c=$('#mm').getContext('2d');c.clearRect(0,0,240,240);drawMap(c,0,0,240,d.lat,d.lon)}
 setInterval(render,1000);$('#note').addEventListener('input',()=>{updTm();render()});
 
@@ -304,9 +387,9 @@ async function geocode(c){
   if(lastPt&&dist(c,lastPt)<40)return;lastPt={latitude:c.latitude,longitude:c.longitude};loadTiles(c);
   const [a,b]=await Promise.allSettled([
     fetch('https://nominatim.openstreetmap.org/reverse?format=jsonv2&zoom=18&accept-language='+S.lang+'&lat='+c.latitude+'&lon='+c.longitude).then(r=>r.json()),
-    fetch('https://api.open-meteo.com/v1/forecast?current=temperature_2m,weather_code&latitude='+c.latitude+'&longitude='+c.longitude).then(r=>r.json())]);
+    fetch('https://api.open-meteo.com/v1/forecast?current=temperature_2m,weather_code,is_day,wind_speed_10m,wind_direction_10m&latitude='+c.latitude+'&longitude='+c.longitude).then(r=>r.json())]);
   if(a.status==='fulfilled'){const j=a.value,ad=j.address||{};addr={short:ad.road||ad.neighbourhood||ad.suburb||ad.village||ad.town||ad.city||j.name||'Unnamed place',full:j.display_name||'',pin:ad.postcode||''}}else lastPt=null;
-  if(b.status==='fulfilled'&&b.value.current)wx=Math.round(b.value.current.temperature_2m)+'°C '+wxText(b.value.current.weather_code);
+  if(b.status==='fulfilled'&&b.value.current){const k=b.value.current;wx={t:Math.round(k.temperature_2m),text:wxText(k.weather_code),icon:wxIcon(k.weather_code,k.is_day!==0),w:Math.round(k.wind_speed_10m),wd:k.wind_direction_10m}}
   render()}
 function startGps(){
   if(!navigator.geolocation){setGps('err','GPS is not supported on this device');return}
@@ -347,16 +430,161 @@ const putShot=s=>{if(db)try{os('readwrite').put({id:s.id,blob:s.blob,name:s.name
 const delShot=s=>{if(db)try{os('readwrite').delete(s.id)}catch(e){}};
 
 /* ---------- capture ---------- */
-async function snap(src,w,h){
-  const d=data(),c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.drawImage(src,0,0,w,h);
-  if(S.style!=='off')stampOn(x,w,h,d,S.style);
-  const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.92));
-  const s={id:Date.now(),blob,url:URL.createObjectURL(blob),name:'thikana-'+new Date().toISOString().replace(/[:.]/g,'-')+'.jpg',lat:pos?d.lat:null,lon:pos?d.lon:null};
+async function snap(src,w,h,o){
+  await fontsReady;
+  const d=data(o),c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.drawImage(src,0,0,w,h);
+  if(S.style!=='off'){const keep=mapTile;if(o)mapTile=o.tile;try{stampOn(x,w,h,d,S.style)}finally{mapTile=keep}}
+  let blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.92));
+  const P=o?o.pos:pos;if(S.exif!==false&&P)blob=await addExif(blob,P.latitude,P.longitude,P.altitude,o?o.date:(custom||new Date()));
+  const s={id:Date.now(),blob,url:URL.createObjectURL(blob),name:'thikana-'+new Date().toISOString().replace(/[:.]/g,'-')+'.jpg',lat:(o||pos)?d.lat:null,lon:(o||pos)?d.lon:null};
   shots.unshift(s);putShot(s);paintThumb();if(navigator.vibrate)navigator.vibrate(25);
   const f=$('#flash');f.classList.remove('go');void f.offsetWidth;f.classList.add('go');openView(0)}
 $('#shutter').onclick=()=>{if(stream&&v.videoWidth)snap(v,v.videoWidth,v.videoHeight);else $('#pick').click()};
 $('#pickBtn').onclick=()=>$('#pick').click();
 $('#pick').onchange=async e=>{const f=e.target.files[0];if(!f)return;const b=await createImageBitmap(f);await snap(b,b.width,b.height);e.target.value=''};
+
+/* ---------- GPS photo from the gallery: location chosen by hand ---------- */
+const LM={lat:22.5,lon:79,z:5,bmp:null,url:'',addr:null,sel:null,tiles:new Map(),tok:0,timer:0,drag:null};
+const lmap=$('#lmap'),lt=$('#lt');
+const wpx=(lat,lon,z)=>{const n=256*2**z,s=Math.sin(Math.min(85.05,Math.max(-85.05,lat))*Math.PI/180);return{x:(lon+180)/360*n,y:(.5-Math.log((1+s)/(1-s))/(4*Math.PI))*n}};
+const unpx=(x,y,z)=>{const n=256*2**z,a=Math.PI*(1-2*y/n);return{lat:180/Math.PI*Math.atan(Math.sinh(a)),lon:((x/n*360-180+540)%360)-180}};
+function lDraw(){
+  const W=lmap.clientWidth,H=lmap.clientHeight,z=LM.z,c=wpx(LM.lat,LM.lon,z),n=2**z,need=new Set();
+  const x0=Math.floor((c.x-W/2)/256),x1=Math.floor((c.x+W/2)/256),y0=Math.max(0,Math.floor((c.y-H/2)/256)),y1=Math.min(n-1,Math.floor((c.y+H/2)/256));
+  for(let tx=x0;tx<=x1;tx++)for(let ty=y0;ty<=y1;ty++){
+    const wrapX=((tx%n)+n)%n,key=z+'/'+wrapX+'/'+ty+'/'+tx;need.add(key);
+    let im=LM.tiles.get(key);
+    if(!im){im=new Image();im.className='tl';im.alt='';im.draggable=false;im.src='https://tile.openstreetmap.org/'+z+'/'+wrapX+'/'+ty+'.png';lt.appendChild(im);LM.tiles.set(key,im)}
+    im.style.transform='translate('+Math.round(tx*256-c.x+W/2)+'px,'+Math.round(ty*256-c.y+H/2)+'px)'}
+  for(const [k,im] of LM.tiles)if(!need.has(k)){im.remove();LM.tiles.delete(k)}}
+function lCoord(){$('#lCoord').textContent='🌐 '+fmtCoord({latitude:LM.lat,longitude:LM.lon})}
+function lRev(now){
+  clearTimeout(LM.timer);const t=++LM.tok;LM.addr=null;$('#lPlace').textContent='📍 Finding address…';$('#lAddr').textContent='';
+  LM.timer=setTimeout(async()=>{const a=await revGeo(LM.lat,LM.lon);if(t!==LM.tok)return;LM.addr=a;$('#lPlace').textContent='📍 '+selName(a);$('#lAddr').textContent=a.full},now?0:700)}
+function lView(lat,lon,z,rev,sel){LM.sel=sel||null;LM.lat=Math.max(-85,Math.min(85,lat));LM.lon=lon;if(z)LM.z=z;lDraw();lCoord();paintPlaces();if(rev!==false)lRev(true)}
+async function revGeo(lat,lon){
+  try{const j=await fetch('https://nominatim.openstreetmap.org/reverse?format=jsonv2&zoom=18&accept-language='+S.lang+'&lat='+lat+'&lon='+lon).then(r=>r.json()),ad=j.address||{};
+    return{short:ad.road||ad.neighbourhood||ad.suburb||ad.village||ad.town||ad.city||j.name||'Unnamed place',full:j.display_name||'',pin:ad.postcode||''}}
+  catch(e){return{short:'Unnamed place',full:'',pin:''}}}
+function tileFor(la,lo){return new Promise(res=>{
+  const z=17,n=2**z,x=(lo+180)/360*n,r=la*Math.PI/180,y=(1-Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*n,fx=x-.5,fy=y-.5,tx=Math.floor(fx),ty=Math.floor(fy);
+  const cv=document.createElement('canvas');cv.width=cv.height=256;const g=cv.getContext('2d');let left=4,ok=0;
+  for(let i=0;i<2;i++)for(let j=0;j<2;j++){const im=new Image();im.crossOrigin='anonymous';
+    im.onload=()=>{g.drawImage(im,(tx+i-fx)*256,(ty+j-fy)*256,256,256);ok++;if(--left===0)res(ok===4?cv:null)};
+    im.onerror=()=>{if(--left===0)res(null)};im.src='https://tile.openstreetmap.org/'+z+'/'+(tx+i)+'/'+(ty+j)+'.png'}
+  setTimeout(()=>res(null),7000)})}
+async function wxAt(lat,lon,d){
+  try{const ds=localISO(d).slice(0,10),age=(Date.now()-d)/864e5,
+    u=(age<80?'https://api.open-meteo.com/v1/forecast?':'https://archive-api.open-meteo.com/v1/archive?')+'latitude='+lat+'&longitude='+lon+'&hourly=temperature_2m,weather_code,is_day,wind_speed_10m,wind_direction_10m&start_date='+ds+'&end_date='+ds+'&timezone=auto',
+    j=await fetch(u).then(r=>r.json()),k=j.hourly;if(!k||!k.time)return null;
+    const i=Math.min(d.getHours(),k.time.length-1);if(k.temperature_2m[i]==null)return null;
+    return{t:Math.round(k.temperature_2m[i]),text:wxText(k.weather_code[i]),icon:wxIcon(k.weather_code[i],k.is_day[i]!==0),w:Math.round(k.wind_speed_10m[i]),wd:k.wind_direction_10m[i]}}
+  catch(e){return null}}
+function parseLL(s){
+  s=s.trim();const N='(-?\\d+(?:\\.\\d+)?)';
+  const m=s.match(new RegExp('@'+N+','+N))||s.match(new RegExp('[?&](?:q|ll|query)='+N+'[,+ ]+'+N))||s.match(new RegExp('!3d'+N+'!4d'+N))||s.match(new RegExp('^'+N+'\\s*°?\\s*[,;\\s]\\s*'+N+'\\s*°?$'));
+  if(!m)return null;const a=+m[1],b=+m[2];return Math.abs(a)<=90&&Math.abs(b)<=180?{lat:a,lon:b}:null}
+async function lSearch(){
+  const q=$('#lq').value.trim(),box=$('#lres');if(!q)return;
+  const ll=parseLL(q);if(ll){box.hidden=true;lView(ll.lat,ll.lon,17);return}
+  $('#lgo').disabled=true;box.hidden=false;box.innerHTML='';const sp=document.createElement('button');sp.textContent='Searching…';box.appendChild(sp);
+  try{const r=await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&accept-language='+S.lang+'&q='+encodeURIComponent(q)).then(r=>r.json());
+    box.innerHTML='';
+    if(!r.length){const b=document.createElement('button');b.textContent='No place found. Try a different name.';box.appendChild(b)}
+    r.forEach(p=>{const b=document.createElement('button');b.textContent=p.display_name;b.onclick=()=>{box.hidden=true;lView(+p.lat,+p.lon,p.type==='city'||p.type==='administrative'?13:17)};box.appendChild(b)})}
+  catch(e){box.innerHTML='';const b=document.createElement('button');b.textContent='Search needs internet. Check your connection.';box.appendChild(b)}
+  $('#lgo').disabled=false}
+async function openLoc(f){
+  let bmp;try{bmp=await createImageBitmap(f)}catch(e){alert('This photo could not be opened.');return}
+  LM.bmp=bmp;if(LM.url)URL.revokeObjectURL(LM.url);LM.url=URL.createObjectURL(f);$('#lph').src=LM.url;
+  $('#ldt').value=localISO(new Date(f.lastModified||Date.now()));$('#lq').value='';$('#lres').hidden=true;
+  const st=S.loc||(pos?{lat:pos.latitude,lon:pos.longitude,z:16}:null);
+  $('#lsname').hidden=true;paintPlaces();
+  $('#loc').showModal();
+  if(st)lView(st.lat,st.lon,st.z||16);else{lView(22.5,79,5,false);$('#lPlace').textContent='📍 Pick a location';$('#lAddr').textContent='Search a place or drag the map.'}}
+async function stampManual(){
+  const b=$('#lok');b.disabled=true;b.textContent='Stamping…';
+  try{const date=$('#ldt').value?new Date($('#ldt').value):new Date(),lat=LM.lat,lon=LM.lon;
+    let [ad,w,tile]=await Promise.all([LM.addr?Promise.resolve(LM.addr):revGeo(lat,lon),wxAt(lat,lon,date),tileFor(lat,lon)]);
+    const sp=LM.sel&&placesList().find(p=>p.id===LM.sel);if(sp)ad=Object.assign({},ad,{short:sp.name});
+    const o={pos:{latitude:lat,longitude:lon,altitude:null,accuracy:0,speed:0},addr:ad,wx:w,date,manual:$('#lman').checked,tile};
+    S.loc={lat,lon,z:LM.z};save();$('#loc').close();
+    await snap(LM.bmp,LM.bmp.width,LM.bmp.height,o)}
+  catch(e){alert('Something went wrong while stamping this photo. Please try again.')}
+  b.disabled=false;b.textContent='Stamp photo'}
+lmap.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;const c=wpx(LM.lat,LM.lon,LM.z);LM.drag={x:e.clientX,y:e.clientY,cx:c.x,cy:c.y};lmap.setPointerCapture(e.pointerId);lmap.style.cursor='grabbing'});
+lmap.addEventListener('pointermove',e=>{const d=LM.drag;if(!d)return;if(LM.sel){LM.sel=null;paintPlaces()}const p=unpx(d.cx-(e.clientX-d.x),d.cy-(e.clientY-d.y),LM.z);LM.lat=Math.max(-85,Math.min(85,p.lat));LM.lon=p.lon;lDraw();lCoord()});
+const lEnd=()=>{if(!LM.drag)return;LM.drag=null;lmap.style.cursor='grab';lRev()};
+lmap.addEventListener('pointerup',lEnd);lmap.addEventListener('pointercancel',lEnd);
+lmap.addEventListener('wheel',e=>{e.preventDefault();LM.z=Math.max(3,Math.min(19,LM.z+(e.deltaY<0?1:-1)));lDraw()},{passive:false});
+$('#lzi').onclick=()=>{LM.z=Math.min(19,LM.z+1);lDraw()};$('#lzo').onclick=()=>{LM.z=Math.max(3,LM.z-1);lDraw()};
+$('#lme').onclick=()=>{if(pos){lView(pos.latitude,pos.longitude,17);return}
+  if(!navigator.geolocation){alert('Location is not available on this device.');return}
+  navigator.geolocation.getCurrentPosition(p=>lView(p.coords.latitude,p.coords.longitude,17),()=>alert('Could not get your location. Allow location access and try again.'),{enableHighAccuracy:true,timeout:15000})};
+$('#lgo').onclick=lSearch;$('#lq').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();lSearch()}});
+$('#lx').onclick=()=>$('#loc').close();$('#lok').onclick=stampManual;
+addEventListener('resize',()=>{if($('#loc').open)lDraw()});
+$('#galB').onclick=()=>$('#gal').click();
+$('#gal').onchange=e=>{const f=e.target.files[0];e.target.value='';if(f)openLoc(f)};
+
+/* ---------- EXIF: GPS + date written inside the JPEG file ---------- */
+function makeExif(lat,lon,alt,date){
+  const be16=n=>[n>>8&255,n&255],be32=n=>[n>>>24&255,n>>16&255,n>>8&255,n&255],asc=s=>[...new TextEncoder().encode(s),0],rat=(n,d)=>[...be32(n),...be32(d)],p2=n=>String(n).padStart(2,'0');
+  const E=(tag,type,bytes)=>({tag,type,bytes,count:type===5?bytes.length/8:type===4?bytes.length/4:bytes.length});
+  const dms=v=>{v=Math.abs(v);let d=Math.floor(v),m=Math.floor((v-d)*60),s=Math.round(((v-d)*60-m)*60*1e4);if(s>=6e5){s-=6e5;m++}if(m>=60){m-=60;d++}return[...rat(d,1),...rat(m,1),...rat(s,1e4)]};
+  const ld=date.getFullYear()+':'+p2(date.getMonth()+1)+':'+p2(date.getDate())+' '+p2(date.getHours())+':'+p2(date.getMinutes())+':'+p2(date.getSeconds());
+  const off=-date.getTimezoneOffset(),oz=(off<0?'-':'+')+p2(Math.floor(Math.abs(off)/60))+':'+p2(Math.abs(off)%60);
+  const gps=[E(0,1,[2,3,0,0]),E(1,2,asc(lat<0?'S':'N')),E(2,5,dms(lat)),E(3,2,asc(lon<0?'W':'E')),E(4,5,dms(lon))];
+  if(alt!=null&&isFinite(alt))gps.push(E(5,1,[alt<0?1:0]),E(6,5,rat(Math.round(Math.abs(alt)*100),100)));
+  gps.push(E(7,5,[...rat(date.getUTCHours(),1),...rat(date.getUTCMinutes(),1),...rat(date.getUTCSeconds(),1)]),E(0x1D,2,asc(date.getUTCFullYear()+':'+p2(date.getUTCMonth()+1)+':'+p2(date.getUTCDate()))));
+  const exif=[E(0x9000,7,[48,50,51,50]),E(0x9003,2,asc(ld)),E(0x9004,2,asc(ld)),E(0x9011,2,asc(oz))];
+  const build=(es,start)=>{es=es.slice().sort((a,b)=>a.tag-b.tag);const n=es.length,head=[...be16(n)],data=[],base=start+2+12*n+4;
+    es.forEach(e=>{head.push(...be16(e.tag),...be16(e.type),...be32(e.count));
+      if(e.bytes.length<=4)head.push(...e.bytes,...Array(4-e.bytes.length).fill(0));
+      else{head.push(...be32(base+data.length));data.push(...e.bytes);if(data.length%2)data.push(0)}});
+    return head.concat([0,0,0,0],data)};
+  const top=(pe,pg)=>[E(0x0131,2,asc('Thikana Cam')),E(0x0132,2,asc(ld)),E(0x8769,4,be32(pe)),E(0x8825,4,be32(pg))];
+  const s0=build(top(0,0),8).length,s1=build(exif,0).length;
+  const tiff=[0x4D,0x4D,0,42,...be32(8),...build(top(8+s0,8+s0+s1),8),...build(exif,8+s0),...build(gps,8+s0+s1)];
+  return[0x45,0x78,0x69,0x66,0,0,...tiff]}
+async function addExif(blob,lat,lon,alt,date){
+  try{const buf=new Uint8Array(await blob.arrayBuffer());if(buf[0]!==0xFF||buf[1]!==0xD8)return blob;
+    const ex=makeExif(lat,lon,alt,date),len=ex.length+2;
+    return new Blob([buf.subarray(0,2),new Uint8Array([0xFF,0xE1,len>>8&255,len&255,...ex]),buf.subarray(2)],{type:'image/jpeg'})}
+  catch(e){return blob}}
+function setExif(on){S.exif=on;save();$$('#exSeg button').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.x==='1')===on))}
+$$('#exSeg button').forEach(b=>b.onclick=()=>setExif(b.dataset.x==='1'));
+
+/* ---------- brand name + logo on the stamp ---------- */
+function paintBrandUI(){const p=$('#logoP');p.hidden=!S.logo;if(S.logo)p.src=S.logo;$('#logoX').hidden=!S.logo;$('#logoB').textContent=S.logo?'Change logo':'Add logo'}
+function loadBrand(){brandImg=null;if(S.logo){const im=new Image();im.onload=()=>{brandImg=im;paintBrandUI();render()};im.onerror=()=>paintBrandUI();im.src=S.logo}else{paintBrandUI();render()}}
+$('#brandT').value=S.brand||'';
+$('#brandT').addEventListener('input',e=>{S.brand=e.target.value.slice(0,28);save();render()});
+$('#logoB').onclick=()=>$('#logoIn').click();
+$('#logoIn').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;
+  try{const b=await createImageBitmap(f),s=Math.min(b.width,b.height),c=document.createElement('canvas');c.width=c.height=128;
+    c.getContext('2d').drawImage(b,(b.width-s)/2,(b.height-s)/2,s,s,0,0,128,128);S.logo=c.toDataURL('image/png');save();loadBrand()}
+  catch(err){alert('This image could not be used as a logo.')}};
+$('#logoX').onclick=()=>{delete S.logo;save();loadBrand()};
+
+/* ---------- saved places ---------- */
+const placesList=()=>S.places||(S.places=[]);
+const selName=a=>{const sp=LM.sel&&placesList().find(p=>p.id===LM.sel);return sp?sp.name:a.short};
+function paintPlaces(){
+  const box=$('#lsaved'),L=placesList();box.innerHTML='';box.hidden=!L.length;
+  L.forEach(p=>{const w=document.createElement('div');w.className='pc'+(LM.sel===p.id?' on':'');
+    const a=document.createElement('button');a.type='button';a.textContent='⭐ '+p.name;a.onclick=()=>lView(p.lat,p.lon,p.z||17,true,p.id);
+    const x=document.createElement('button');x.type='button';x.className='px';x.textContent='✕';x.setAttribute('aria-label','Delete '+p.name);
+    x.onclick=()=>{if(confirm('Delete saved place “'+p.name+'”?')){S.places=L.filter(q=>q.id!==p.id);if(LM.sel===p.id)LM.sel=null;save();paintPlaces()}};
+    w.append(a,x);box.appendChild(w)})}
+function savePlace(){
+  const n=$('#lsn').value.trim().slice(0,30);if(!n)return;
+  const L=placesList();let p=L.find(q=>q.name.toLowerCase()===n.toLowerCase());
+  if(!p){if(L.length>=30){alert('You can save up to 30 places. Delete one first.');return}p={id:Date.now(),name:n};L.push(p)}
+  p.lat=LM.lat;p.lon=LM.lon;p.z=LM.z;LM.sel=p.id;save();$('#lsname').hidden=true;paintPlaces();
+  if(LM.addr)$('#lPlace').textContent='📍 '+selName(LM.addr)}
+$('#lsv').onclick=()=>{$('#lsname').hidden=false;$('#lsn').value='';$('#lsn').focus()};
+$('#lsok').onclick=savePlace;$('#lsn').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();savePlace()}});
 
 /* ---------- viewer ---------- */
 const dlg=$('#dlg');
@@ -417,7 +645,7 @@ $('#fAbout').onclick=()=>{openAbout();$('#about').scrollTop=0};$('#fPriv').oncli
 $('#aboutB2').onclick=()=>{sheet.close();$('#about').showModal()};
 $('#aboutX').onclick=()=>$('#about').close();
 
-setStyle(S.style);setLang(S.lang,false);setGrid(S.grid);paintThumb();loadShots();paintMap();render();startGps();startCam();
+setStyle(S.style);setLang(S.lang,false);setExif(S.exif!==false);loadBrand();setGrid(S.grid);paintThumb();loadShots();paintMap();render();startGps();startCam();
 </script>
 </body>
 </html>
